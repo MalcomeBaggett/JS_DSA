@@ -65,11 +65,36 @@ class BST {
              }
          }
     }
+
+    BFS() {
+        const queue = []
+        const visited = []
+
+        if (this.root === null) {
+            return undefined
+        }
+
+        queue.push(this.root)
+
+        while (queue.length > 0) {
+            let deQueued = queue.shift()
+            console.log(deQueued)
+            visited.push(deQueued)
+            if (deQueued.left !== null) {
+                queue.push(deQueued.left)
+            }
+            if (deQueued.right !== null) {
+                queue.push(deQueued.right)
+            }
+        }
+        return visited
+    }
 }
 
-const bst = new BST()
+let bst = new BST()
 
-for (i = 0; i < 10; i++){
+for (i = 1; i <= 10; i++){
     bst.Insert(i)
-    console.log(i)
 }
+
+console.log(bst.BFS())
