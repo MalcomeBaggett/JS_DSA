@@ -76,9 +76,8 @@ class BST {
 
         queue.push(this.root)
 
-        while (queue.length > 0) {
+        while (queue.length) {
             let deQueued = queue.shift()
-            console.log(deQueued)
             visited.push(deQueued)
             if (deQueued.left !== null) {
                 queue.push(deQueued.left)
@@ -89,12 +88,66 @@ class BST {
         }
         return visited
     }
+
+    DFSPREORDER() {
+        const visited = []
+        let current = this.root
+        let depthFirst = (node) => {
+            visited.push(node)
+            if (node.left){
+                depthFirst(node.left)
+            }
+            if (node.right) {
+                depthFirst(node.right)
+            }
+        }
+        depthFirst(current)
+
+        return visited
+    }
+
+    DFSPOSTORDER() {
+        const visited = []
+        let current = this.root
+
+        let postOrder = (node) => {
+            if (node.left) {
+                postOrder(node.left)
+            }
+
+            if (node.right) {
+                postOrder(node.right)
+            }
+
+            visited.push(node)
+        }
+        postOrder(current)
+        return visited
+    }
+
+    DFSINORDER() {
+        const visited = []
+        let current = this.root
+
+        let inOrder = (node) => {
+            if (node.left) inOrder(node.left)
+            visited.push(node)
+            if (node.right) inOrder(node.right)
+        }
+
+        inOrder(current)
+        return visited
+    }
+    
 }
 
 let bst = new BST()
 
-for (i = 1; i <= 10; i++){
-    bst.Insert(i)
-}
+bst.Insert(10)
+bst.Insert(6)
+bst.Insert(15)
+bst.Insert(3)
+bst.Insert(8)
+bst.Insert(20)
 
-console.log(bst.BFS())
+console.log(bst.DFSINORDER())
