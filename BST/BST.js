@@ -12,7 +12,6 @@ class BST {
     }
 
     Insert(val) {
-        console.log('hit')
         let newNode = new Node(val)
         if(this.root === null ){
             this.root = newNode
@@ -141,13 +140,18 @@ class BST {
     
 }
 
-let bst = new BST()
+// let bst = new BST()
 
-bst.Insert(10)
-bst.Insert(6)
-bst.Insert(15)
-bst.Insert(3)
-bst.Insert(8)
-bst.Insert(20)
+// bst.Insert(10)
+// bst.Insert(6)
+// bst.Insert(15)
+// bst.Insert(3)
+// bst.Insert(8)
+// bst.Insert(20)
 
-console.log(bst.DFSINORDER())
+// console.log(bst.DFSINORDER())
+
+module.exports = {
+    Node,
+    BST,
+}
