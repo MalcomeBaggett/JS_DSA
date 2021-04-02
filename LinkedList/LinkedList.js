@@ -58,6 +58,39 @@ class LinkedList {
         newNode.next = curr
         this.head = newNode
     }
+
+    Delete(val) {
+        if(!this.head) return false
+        
+        let deleted = null
+
+        if (this.head.value === val) {
+            deleted = this.head
+            this.head = this.head.next
+        }
+
+        let curr = this.head
+        let prev = curr
+
+        while (curr) {
+            while (curr.next) {
+                if (curr.next.val === val) {
+                    deleted = curr.next.val
+                    curr.next = curr.next.next
+                } else {
+                    curr = curr.next
+                }
+           }
+        }
+
+        if (this.tail.val === val) {
+            deleted = this.tail
+            this.tail = curr
+
+        }
+
+        return deleted
+    }
 }
 
 let LL = new LinkedList()
