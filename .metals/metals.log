@@ -2,3 +2,11 @@
 [0m2021.03.25 21:49:41 INFO  time: initialize in 0.77s[0m
 [0m2021.03.25 21:49:42 WARN  Build server is not auto-connectable.[0m
 [0m2021.03.25 21:49:42 WARN  no build tool detected in workspace 'C:\Users\Malcome\Desktop\JS_DSA'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.04.01 20:32:15 INFO  Started: Metals version 0.10.0 in workspace 'C:\Users\Malcome\Desktop\JS_DSA' for client vscode 1.50.1.[0m
+[0m2021.04.01 20:32:16 INFO  time: initialize in 1.36s[0m
+[0m2021.04.01 20:32:22 WARN  Build server is not auto-connectable.[0m
+[0m2021.04.01 20:32:22 WARN  no build tool detected in workspace 'C:\Users\Malcome\Desktop\JS_DSA'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.04.03 09:15:24 INFO  Started: Metals version 0.10.0 in workspace 'C:\Users\Malcome\Desktop\JS_DSA' for client vscode 1.50.1.[0m
+[0m2021.04.03 09:15:25 INFO  time: initialize in 1.04s[0m
+[0m2021.04.03 09:15:30 WARN  Build server is not auto-connectable.[0m
+[0m2021.04.03 09:15:30 WARN  no build tool detected in workspace 'C:\Users\Malcome\Desktop\JS_DSA'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
