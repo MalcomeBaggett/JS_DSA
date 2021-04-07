@@ -157,18 +157,21 @@ let LL = new LinkedList()
 // console.log(LL.head)
 // console.log(LL.Print())
 
-LL.Append(1)
-LL.Append(2)
-LL.Append(5)
-LL.Append(7)
-LL.Append(15)
+// LL.Append(1)
+// LL.Append(2)
+// LL.Append(5)
+// LL.Append(7)
+// LL.Append(15)
 
 // console.log(LL.Delete(2))
 // console.log(LL.Delete(15))
 // LL.Reverse()
 
-LL.DeleteHead()
-LL.DeleteTail()
-console.log(LL.Print())
-console.log(LL.head)
-console.log(LL.tail)
+// LL.DeleteHead()
+// LL.DeleteTail()
+// console.log(LL.Print())
+// console.log(LL.head)
+// console.log(LL.tail)
+module.exports = {
+     LinkedList
+ }
