@@ -1,3 +1,5 @@
+let test1 = [1,2,3,4,5,6]
+let test2 = [5,6]
 const intersection = (arr1, arr2) => {
     let retArr = []
 
@@ -6,13 +8,16 @@ const intersection = (arr1, arr2) => {
     for (let ele of arr1) {
         map[ele] = ele
     }
+    
 
     for (let ele of arr2) {
-        if (map[ele] && retArr.includes(ele) === false) {
+        if (map[`${ele}`] && retArr.includes(ele) === false) {
             retArr.push(ele)
         }
     }
 
-    console.log(retArr)
+    return retArr
 }
 
+
+console.log(intersection(test1, test2))
