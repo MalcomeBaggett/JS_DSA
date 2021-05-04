@@ -32,3 +32,8 @@ class Hashmap {
       return finalHash;
     }
   }
+
+  let m = new Hashmap()
+
+  m.set('Malcome', {adress: 100})
+  console.log(m.get('Malcome'))
