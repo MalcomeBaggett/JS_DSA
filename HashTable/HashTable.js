@@ -1,18 +1,34 @@
-const linkedList = require('../LinkedList/LinkedList')
-const defaultBucket = 32
-class HashTable {
-    constructor(bucketNumber = defaultBucketsNumber ) {
-        this.buckets = Array(bucketsNumber).fill(null).map()
+class Hashmap {
+    constructor() {
+      this._storage = []
     }
-
-    Hash(key) {
-        let hashCode = 0
-        for (let charIndex = 0; charIndex < key.length; charIndex +=1) {
-            hashCode += key.charCodeAt(charIndex)
-        }
-        return hashCode % this.buckets.lengt
+  
+    set(key, val) {
+      const hashKey = this.hashStr(key)
+      if (!this._storage[hashKey]) {
+          this._storage[hashKey] = []
+      }
+      this._storage[hashKey].push([key, val])
     }
-}
+  
+    get(key) {
+      // implement this
+      const hashKey = this.hashStr(key)
 
-const ll = new linkedList.LinkedList()
+      if (!this._storage[hashKey]) return undefined
 
+      for (let keyVal of this._storage[hashKey]){
+          if (keyVal[0] === key) return keyVal[1]
+      }
+
+    }
+  
+    hashStr(str) {
+      let finalHash = 0;
+      for (let i = 0; i < str.length; i++) {
+        const charCode = str.charCodeAt(i);
+        finalHash += charCode;
+      }
+      return finalHash;
+    }
+  }
